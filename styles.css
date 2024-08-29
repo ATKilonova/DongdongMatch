@@ -1,0 +1,248 @@
+/* 全局样式 */
+html {
+  scroll-behavior:smooth
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #bdbdbd;
+  color: #cccccc;
+  line-height: 1.6;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* 头部样式 */
+header {
+  background-color: #2e2e2e;
+  color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #3c3c3c;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.6s ease forwards;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#HB {
+  text-align: center;
+  padding: 5px;
+  border-radius: 0px;
+  margin: 25px -1%;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.6s ease forwards 0.4s;
+}
+
+/* 导航栏样式 */
+nav {
+  position: relative;
+  background-color: #2e2e2e;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #3c3c3c;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.6s ease forwards 0.2s;
+}
+
+nav a {
+  color: #fed600;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: #fed600;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* 主要内容部分样式 */
+section {
+  background-color: #2e2e2e;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #3c3c3c;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards 0.6s;
+}
+
+h2 {
+  color: #fed600;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #3c3c3c;
+  padding-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 技能列表样式 */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.6s ease forwards 0.3s;
+}
+
+.skills li {
+  list-style-type: none;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.skills li:hover {
+  background-color: #ffe86c;
+  color: #000000;
+}
+
+iframe {
+  width: 100%;
+}
+
+.iframe {
+  border: 2px solid #3c3c3c;
+  width: 100%;
+}
+
+a:link {
+  color: #fed600;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+a:visited {
+  text-decoration: none;
+  color: #fed600;
+}
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 联系方式样式 */
+.contact-info {
+  list-style-type: none;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.contact-info a {
+  color: #fed600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #db8402;
+}
+
+.img {
+  background-image: linear-gradient(to right, #2e2e2e,#db8402,#db8402,#db8402,#db8402,#2e2e2e);
+  width: 100%;
+}
+
+img {
+  display: block;
+  margin: auto;
+} 
